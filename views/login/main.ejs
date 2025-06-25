@@ -1,0 +1,18 @@
+<% //criar o front end com para indicar os erros para usuario
+    if(errorsValidator != null){
+        errorsValidator.forEach(function(err){
+            console.log(err.msg);
+        });
+    }   
+    
+%>
+
+<main>
+    <form action="/login/auth" method="post">
+        <label for="user">usuario</label>
+        <input id="user" type="text" name="userName">
+        <label for="pass">senha</label>
+        <input type="password" id="pass" name="userPassword">
+        <input type="submit" value="enviar">
+    </form>
+</main>
