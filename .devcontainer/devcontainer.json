@@ -1,0 +1,9 @@
+{
+  "name": "Container com MySQL",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "sudo service mysql start",
+  "forwardPorts": [3306],
+  "remoteUser": "vscode"
+}
