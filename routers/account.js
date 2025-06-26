@@ -8,7 +8,7 @@ router.get('/', function(req, res){
     accountController.index(req, res);
 });
 
-router.get('/new-account',
+router.post('/new-account',
     accountValidator,
     function(req, res){
         const errorResult = validationResult(req);
