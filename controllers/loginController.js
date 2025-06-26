@@ -1,6 +1,6 @@
 module.exports = {
-    index: function(req, res, errorsValidator = null){
+    index: function(req, res, errorValidator = null){
        
-        res.render('views/login/index', {pathName:'main', errorsValidator});
+        res.render('views/login/index', {pathName:'main', errorValidator});
     }
 }

@@ -1,6 +1,6 @@
 <% //criar o front end com para indicar os erros para usuario
-    if(errorsValidator != null){
-        errorsValidator.forEach(function(err){
+    if(errorValidator != null){
+        errorValidator.forEach(function(err){
             console.log(err.msg);
         });
     }   
@@ -15,4 +15,9 @@
         <input type="password" id="pass" name="userPassword">
         <input type="submit" value="enviar">
     </form>
+
+    <section>
+        <a href="#">esqueci a senha</a>
+        <a href="/account">criar uma conta</a>
+    </section>
 </main>

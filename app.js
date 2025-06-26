@@ -3,6 +3,8 @@ const app = express();
 const port = 3000;
 const homeRouter = require('./routers/home');
 const loginRouter = require('./routers/login');
+const accountRouter = require('./routers/account');
+
 
 app.use(express.static('public'));
 app.use(express.json());
@@ -16,7 +18,7 @@ app.set('view engine', 'ejs');
 //ex para acessar a rota login/auth dentro do login router basta só indicar o nome da rota apos a raiz: /auth
 app.use('/', homeRouter);
 app.use('/login', loginRouter);
-
+app.use('/account', accountRouter);
 
 app.listen(port, function(){
     console.log(`app online in ${port}`);

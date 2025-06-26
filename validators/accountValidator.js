@@ -1,5 +1,5 @@
 const {checkSchema} = require('express-validator');
-const loginValidator = checkSchema({
+const accountValidator = checkSchema({
     userName:{
         errorMessage:"nome de usuario invalido, tente novamente",
         notEmpty: true,
@@ -12,6 +12,14 @@ const loginValidator = checkSchema({
             }
         }    
         
+    },
+    userEmail:{
+        errorMessage:"email invalido, tente novamente",
+        notEmpty:true,
+        trim:true,
+        escape:true,
+        isEmail:true
+
     },
     userPassword:{
         errorMessage:"senha digitada invalido, tente novamente",
@@ -26,4 +34,4 @@ const loginValidator = checkSchema({
     }
 });
 
-module.exports = loginValidator;
+module.exports = accountValidator;
