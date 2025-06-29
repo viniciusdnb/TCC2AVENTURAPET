@@ -1,0 +1,8 @@
+USE AVENTURAPET;
+
+CREATE TABLE Password_hash (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    hash VARCHAR(255) NOT NULL,
+    id_user INT,
+    FOREIGN KEY (id_user) REFERENCES Users (id)
+);
