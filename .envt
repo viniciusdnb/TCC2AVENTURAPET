@@ -1,7 +1,7 @@
 PORT = 3000
-DB_HOST = 127.0.0.1
+DB_HOST = localhost
 DB_USER = root
-DB_PASS = 12345678
+DB_PASS = 
 DB_NAME = AVENTURAPET
 DB_DIALECT = mysql
 NODE_ENV=development

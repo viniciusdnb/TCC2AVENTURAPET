@@ -9,7 +9,7 @@ CREATE TABLE users (
 
 INSERT  INTO users (name, password_hash) VALUES ('first', '123456789');
 
-DELETE * FROM users WHERE id = 1;
+DELETE FROM users WHERE id = 1;
 
 ALTER TABLE users RENAME Users;
 

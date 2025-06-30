@@ -41,9 +41,11 @@ module.exports = {
             id_user: user.id
         });
         
+        //pesquisar e criar uma forma de verifica se os dados estao sendo inserido com sucesso
 
-        console.log('all users:', JSON.stringify(users, null, 2));
-        console.log(pass);
+        return res.render('views/login/index', {pathName: "main", msg: "Usuario cadastrado com sucesso, digite o email e senha para entrar"});
+        //console.log('all users:', JSON.stringify(users, null, 2));
+        //console.log(pass);
     }
 
 }

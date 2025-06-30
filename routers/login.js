@@ -3,6 +3,7 @@ const router = express.Router();
 const loginController = require('../controllers/loginController');
 const loginValidator = require('../validators/loginValidator');
 const {validationResult} = require('express-validator');
+const passport = require('../auth/loginAuth')
 
 router.get('/', function(req, res){
     loginController.index(req,res);
@@ -21,8 +22,11 @@ router.post('/auth',
             return loginController.index(req, res, errorValidator);
         };
 
+        next();
+    },
+    passport.authenticate('local',{
         
-
-})
+    })
+)
 
 module.exports = router;
